@@ -1,4 +1,1061 @@
-<!DOCTYPE html>
+
+
+    <!-- Login Page -->
+    <div id="login-page" class="page">
+        <div class="min-vh-100 d-flex align-items-center" style="background: var(--gradient-primary);">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-5 col-md-7">
+                        <div class="auth-container" data-aos="zoom-in">
+                            <div class="text-center mb-4">
+                                <div class="logo-icon mx-auto mb-3"></div>
+                                <h2 class="fw-bold" data-ar="تسجيل الدخول" data-en="Login">تسجيل الدخول</h2>
+                                <p class="text-muted" data-ar="مرحباً بك مرة أخرى في تريند تريس" data-en="Welcome back to TrendTrace">مرحباً بك مرة أخرى في تريند تريس</p>
+                            </div>
+
+                            <form id="loginForm" novalidate>
+                                <div class="form-floating-enhanced">
+                                    <input type="email" class="form-control form-control-enhanced" id="loginEmail" placeholder=" " required>
+                                    <label for="loginEmail" data-ar="البريد الإلكتروني" data-en="Email Address">البريد الإلكتروني</label>
+                                    <div class="invalid-feedback" id="loginEmailError"></div>
+                                </div>
+
+                                <div class="form-floating-enhanced">
+                                    <input type="password" class="form-control form-control-enhanced" id="loginPassword" placeholder=" " required>
+                                    <label for="loginPassword" data-ar="كلمة المرور" data-en="Password">كلمة المرور</label>
+                                    <div class="invalid-feedback" id="loginPasswordError"></div>
+                                </div>
+
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="rememberMe">
+                                        <label class="form-check-label" for="rememberMe" data-ar="تذكرني" data-en="Remember me">تذكرني</label>
+                                    </div>
+                                    <a href="#" class="text-decoration-none" data-ar="نسيت كلمة المرور؟" data-en="Forgot password?">نسيت كلمة المرور؟</a>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary-custom w-100 mb-3">
+                                    <i class="fas fa-sign-in-alt me-2"></i>
+                                    <span data-ar="تسجيل الدخول" data-en="Login">تسجيل الدخول</span>
+                                </button>
+
+                                <div class="text-center">
+                                    <span class="text-muted" data-ar="ليس لديك حساب؟" data-en="Don't have an account?">ليس لديك حساب؟</span>
+                                    <a href="#" onclick="showPage('register')" class="text-decoration-none fw-bold" data-ar="إنشاء حساب جديد" data-en="Create new account">إنشاء حساب جديد</a>
+                                </div>
+
+                                <div class="mt-4 pt-4 border-top text-center">
+                                    <p class="text-muted mb-3" data-ar="أو سجل الدخول بـ" data-en="Or login with">أو سجل الدخول بـ</p>
+                                    <div class="d-flex gap-2 justify-content-center">
+                                        <button type="button" class="btn btn-outline-secondary">
+                                            <i class="fab fa-google"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-outline-secondary">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-outline-secondary">
+                                            <i class="fab fa-twitter"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Page -->
+    <div id="register-page" class="page">
+        <div class="min-vh-100 d-flex align-items-center" style="background: var(--gradient-primary);">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6 col-md-8">
+                        <div class="auth-container" data-aos="zoom-in">
+                            <div class="text-center mb-4">
+                                <div class="logo-icon mx-auto mb-3"></div>
+                                <h2 class="fw-bold" data-ar="إنشاء حساب جديد" data-en="Create Account">إنشاء حساب جديد</h2>
+                                <p class="text-muted" data-ar="انضم إلى تريند تريس وابدأ رحلتك اليوم" data-en="Join TrendTrace and start your journey today">انضم إلى تريند تريس وابدأ رحلتك اليوم</p>
+                            </div>
+
+                            <form id="registerForm" novalidate>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-floating-enhanced">
+                                            <input type="text" class="form-control form-control-enhanced" id="firstName" placeholder=" " required>
+                                            <label for="firstName" data-ar="الاسم الأول" data-en="First Name">الاسم الأول</label>
+                                            <div class="invalid-feedback"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating-enhanced">
+                                            <input type="text" class="form-control form-control-enhanced" id="lastName" placeholder=" " required>
+                                            <label for="lastName" data-ar="الاسم الأخير" data-en="Last Name">الاسم الأخير</label>
+                                            <div class="invalid-feedback"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-floating-enhanced">
+                                    <input type="email" class="form-control form-control-enhanced" id="registerEmail" placeholder=" " required>
+                                    <label for="registerEmail" data-ar="البريد الإلكتروني" data-en="Email Address">البريد الإلكتروني</label>
+                                    <div class="invalid-feedback"></div>
+                                </div>
+
+                                <div class="form-floating-enhanced">
+                                    <input type="tel" class="form-control form-control-enhanced" id="phoneNumber" placeholder=" " required>
+                                    <label for="phoneNumber" data-ar="رقم الهاتف" data-en="Phone Number">رقم الهاتف</label>
+                                    <div class="invalid-feedback"></div>
+                                </div>
+
+                                <div class="form-floating-enhanced">
+                                    <input type="password" class="form-control form-control-enhanced" id="registerPassword" placeholder=" " required>
+                                    <label for="registerPassword" data-ar="كلمة المرور" data-en="Password">كلمة المرور</label>
+                                    <div class="invalid-feedback"></div>
+                                </div>
+
+                                <div class="form-floating-enhanced">
+                                    <input type="password" class="form-control form-control-enhanced" id="confirmPassword" placeholder=" " required>
+                                    <label for="confirmPassword" data-ar="تأكيد كلمة المرور" data-en="Confirm Password">تأكيد كلمة المرور</label>
+                                    <div class="invalid-feedback"></div>
+                                </div>
+
+                                <div class="form-check mb-4">
+                                    <input class="form-check-input" type="checkbox" id="agreeTerms" required>
+                                    <label class="form-check-label" for="agreeTerms">
+                                        <span data-ar="أوافق على" data-en="I agree to the">أوافق على</span>
+                                        <a href="#" class="text-decoration-none" data-ar="الشروط والأحكام" data-en="Terms & Conditions">الشروط والأحكام</a>
+                                        <span data-ar="و" data-en="and">و</span>
+                                        <a href="#" class="text-decoration-none" data-ar="سياسة الخصوصية" data-en="Privacy Policy">سياسة الخصوصية</a>
+                                    </label>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary-custom w-100 mb-3">
+                                    <i class="fas fa-user-plus me-2"></i>
+                                    <span data-ar="إنشاء الحساب" data-en="Create Account">إنشاء الحساب</span>
+                                </button>
+
+                                <div class="text-center">
+                                    <span class="text-muted" data-ar="لديك حساب بالفعل؟" data-en="Already have an account?">لديك حساب بالفعل؟</span>
+                                    <a href="#" onclick="showPage('login')" class="text-decoration-none fw-bold" data-ar="تسجيل الدخول" data-en="Login">تسجيل الدخول</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Dashboard Page -->
+    <div id="admin-page" class="page">
+        <div class="admin-page">
+            <!-- Enhanced Admin Sidebar -->
+            <div class="admin-sidebar position-fixed" id="adminSidebar">
+                <div class="p-3 border-bottom">
+                    <div class="d-flex align-items-center">
+                        <div class="logo-icon me-2" style="width: 35px; height: 35px;"></div>
+                        <span class="fw-bold" data-ar="لوحة التحكم" data-en="Admin Panel">لوحة التحكم</span>
+                    </div>
+                </div>
+                
+                <nav class="nav flex-column p-3">
+                    <a class="nav-link admin-nav-link active" href="#" data-section="dashboard">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span data-ar="لوحة التحكم" data-en="Dashboard">لوحة التحكم</span>
+                    </a>
+                    <a class="nav-link admin-nav-link" href="#" data-section="orders">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span data-ar="الطلبات" data-en="Orders">الطلبات</span>
+                        <span class="badge badge-custom ms-auto">12</span>
+                    </a>
+                    <a class="nav-link admin-nav-link" href="#" data-section="products">
+                        <i class="fas fa-box-open"></i>
+                        <span data-ar="المنتجات" data-en="Products">المنتجات</span>
+                    </a>
+                    <a class="nav-link admin-nav-link" href="#" data-section="customers">
+                        <i class="fas fa-users"></i>
+                        <span data-ar="العملاء" data-en="Customers">العملاء</span>
+                    </a>
+                    <a class="nav-link admin-nav-link" href="#" data-section="analytics">
+                        <i class="fas fa-chart-line"></i>
+                        <span data-ar="التحليلات" data-en="Analytics">التحليلات</span>
+                    </a>
+                    <a class="nav-link admin-nav-link" href="#" data-section="inventory">
+                        <i class="fas fa-warehouse"></i>
+                        <span data-ar="المخزون" data-en="Inventory">المخزون</span>
+                    </a>
+                    <a class="nav-link admin-nav-link" href="#" data-section="marketing">
+                        <i class="fas fa-bullhorn"></i>
+                        <span data-ar="التسويق" data-en="Marketing">التسويق</span>
+                    </a>
+                    <a class="nav-link admin-nav-link" href="#" data-section="settings">
+                        <i class="fas fa-cog"></i>
+                        <span data-ar="الإعدادات" data-en="Settings">الإعدادات</span>
+                    </a>
+                    <hr>
+                    <a class="nav-link text-danger" href="#" onclick="logout()">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span data-ar="تسجيل الخروج" data-en="Logout">تسجيل الخروج</span>
+                    </a>
+                </nav>
+            </div>
+
+            <!-- Admin Main Content -->
+            <div class="admin-main" style="margin-right: 280px; padding: 2rem;">
+                
+                <!-- Dashboard Section -->
+                <div id="dashboard-section" class="admin-section">
+                    <div class="row mb-4">
+                        <div class="col">
+                            <h1 class="display-6 fw-bold" data-ar="مرحباً، أدمن 👋" data-en="Welcome, Admin 👋">مرحباً، أدمن 👋</h1>
+                            <p class="text-muted" data-ar="إليك نظرة عامة على أداء متجرك اليوم" data-en="Here's an overview of your store's performance today">إليك نظرة عامة على أداء متجرك اليوم</p>
+                        </div>
+                        <div class="col-auto">
+                            <button class="btn btn-primary-custom">
+                                <i class="fas fa-download me-2"></i>
+                                <span data-ar="تحميل التقرير" data-en="Download Report">تحميل التقرير</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Enhanced Stats Cards -->
+                    <div class="row g-4 mb-4">
+                        <div class="col-xl-3 col-md-6">
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </div>
+                                <div class="stat-number">1,245</div>
+                                <div class="stat-label" data-ar="إجمالي الطلبات" data-en="Total Orders">إجمالي الطلبات</div>
+                                <div class="progress-custom mt-3">
+                                    <div class="progress-bar-custom" style="width: 75%"></div>
+                                </div>
+                                <small class="text-success mt-2 d-block">
+                                    <i class="fas fa-arrow-up"></i> +12% من الشهر الماضي
+                                </small>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-md-6">
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-dollar-sign"></i>
+                                </div>
+                                <div class="stat-number">$45,230</div>
+                                <div class="stat-label" data-ar="إجمالي المبيعات" data-en="Total Revenue">إجمالي المبيعات</div>
+                                <div class="progress-custom mt-3">
+                                    <div class="progress-bar-custom" style="width: 85%"></div>
+                                </div>
+                                <small class="text-success mt-2 d-block">
+                                    <i class="fas fa-arrow-up"></i> +18% من الشهر الماضي
+                                </small>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-md-6">
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="stat-number">892</div>
+                                <div class="stat-label" data-ar="العملاء النشطين" data-en="Active Customers">العملاء النشطين</div>
+                                <div class="progress-custom mt-3">
+                                    <div class="progress-bar-custom" style="width: 65%"></div>
+                                </div>
+                                <small class="text-warning mt-2 d-block">
+                                    <i class="fas fa-arrow-down"></i> -3% من الشهر الماضي
+                                </small>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-md-6">
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-box"></i>
+                                </div>
+                                <div class="stat-number">156</div>
+                                <div class="stat-label" data-ar="المنتجات" data-en="Products">المنتجات</div>
+                                <div class="progress-custom mt-3">
+                                    <div class="progress-bar-custom" style="width: 90%"></div>
+                                </div>
+                                <small class="text-success mt-2 d-block">
+                                    <i class="fas fa-arrow-up"></i> +5 منتجات جديدة
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <div class="row mb-4">
+                        <div class="col">
+                            <div class="card card-enhanced">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-3" data-ar="إجراءات سريعة" data-en="Quick Actions">إجراءات سريعة</h5>
+                                    <div class="row g-3">
+                                        <div class="col-md-3">
+                                            <button class="btn btn-primary-custom w-100">
+                                                <i class="fas fa-plus me-2"></i>
+                                                <span data-ar="منتج جديد" data-en="New Product">منتج جديد</span>
+                                            </button>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <button class="btn btn-outline-custom w-100">
+                                                <i class="fas fa-eye me-2"></i>
+                                                <span data-ar="عرض الطلبات" data-en="View Orders">عرض الطلبات</span>
+                                            </button>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <button class="btn btn-outline-custom w-100">
+                                                <i class="fas fa-chart-bar me-2"></i>
+                                                <span data-ar="التقارير" data-en="Reports">التقارير</span>
+                                            </button>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <button class="btn btn-outline-custom w-100">
+                                                <i class="fas fa-cog me-2"></i>
+                                                <span data-ar="الإعدادات" data-en="Settings">الإعدادات</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Orders Table -->
+                    <div class="card table-enhanced">
+                        <div class="card-header bg-transparent border-0 p-4">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="mb-0" data-ar="الطلبات الأخيرة" data-en="Recent Orders">الطلبات الأخيرة</h5>
+                                <div class="dropdown">
+                                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                        <i class="fas fa-filter me-2"></i>
+                                        <span data-ar="تصفية" data-en="Filter">تصفية</span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#" data-ar="اليوم" data-en="Today">اليوم</a></li>
+                                        <li><a class="dropdown-item" href="#" data-ar="هذا الأسبوع" data-en="This Week">هذا الأسبوع</a></li>
+                                        <li><a class="dropdown-item" href="#" data-ar="هذا الشهر" data-en="This Month">هذا الشهر</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th data-ar="رقم الطلب" data-en="Order ID">رقم الطلب</th>
+                                        <th data-ar="العميل" data-en="Customer">العميل</th>
+                                        <th data-ar="المنتج" data-en="Product">المنتج</th>
+                                        <th data-ar="التاريخ" data-en="Date">التاريخ</th>
+                                        <th data-ar="المبلغ" data-en="Amount">المبلغ</th>
+                                        <th data-ar="الحالة" data-en="Status">الحالة</th>
+                                        <th data-ar="الإجراءات" data-en="Actions">الإجراءات</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>#ORD-001</strong></td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <div class="testimonial-avatar me-3" style="width: 40px; height: 40px; font-size: 1rem;">
+                                                    A
+                                                </div>
+                                                <div>
+                                                    <div class="fw-bold">أحمد محمد</div>
+                                                    <small class="text-muted">ahmed@example.com</small>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>تيشيرت مخصص</td>
+                                        <td>2024-01-15</td>
+                                        <td><strong>$25.00</strong></td>
+                                        <td><span class="status-badge status-active">مكتمل</span></td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="dropdown">
+                                                    <i class="fas fa-ellipsis-v"></i>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#"><i class="fas fa-eye me-2"></i>عرض</a></li>
+                                                    <li><a class="dropdown-item" href="#"><i class="fas fa-edit me-2"></i>تحرير</a></li>
+                                                    <li><a class="dropdown-item" href="#"><i class="fas fa-print me-2"></i>طباعة</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>#ORD-002</strong></td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <div class="testimonial-avatar me-3" style="width: 40px; height: 40px; font-size: 1rem;">
+                                                    F
+                                                </div>
+                                                <div>
+                                                    <div class="fw-bold">فاطمة علي</div>
+                                                    <small class="text-muted">fatima@example.com</small>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>كوب مخصص</td>
+                                        <td>2024-01-14</td>
+                                        <td><strong>$15.00</strong></td>
+                                        <td><span class="status-badge status-pending">قيد المعالجة</span></td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="dropdown">
+                                                    <i class="fas fa-ellipsis-v"></i>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#"><i class="fas fa-eye me-2"></i>عرض</a></li>
+                                                    <li><a class="dropdown-item" href="#"><i class="fas fa-edit me-2"></i>تحرير</a></li>
+                                                    <li><a class="dropdown-item" href="#"><i class="fas fa-print me-2"></i>طباعة</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>#ORD-003</strong></td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <div class="testimonial-avatar me-3" style="width: 40px; height: 40px; font-size: 1rem;">
+                                                    M
+                                                </div>
+                                                <div>
+                                                    <div class="fw-bold">محمود حسن</div>
+                                                    <small class="text-muted">mahmoud@example.com</small>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>حقيبة مخصصة</td>
+                                        <td>2024-01-13</td>
+                                        <td><strong>$35.00</strong></td>
+                                        <td><span class="status-badge status-active">مكتمل</span></td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="dropdown">
+                                                    <i class="fas fa-ellipsis-v"></i>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#"><i class="fas fa-eye me-2"></i>عرض</a></li>
+                                                    <li><a class="dropdown-item" href="#"><i class="fas fa-edit me-2"></i>تحرير</a></li>
+                                                    <li><a class="dropdown-item" href="#"><i class="fas fa-print me-2"></i>طباعة</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Other Admin Sections (Orders, Products, etc.) would follow similar enhanced patterns -->
+                <div id="orders-section" class="admin-section" style="display: none;">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h2 data-ar="إدارة الطلبات" data-en="Orders Management">إدارة الطلبات</h2>
+                        <button class="btn btn-primary-custom">
+                            <i class="fas fa-plus me-2"></i>
+                            <span data-ar="طلب جديد" data-en="New Order">طلب جديد</span>
+                        </button>
+                    </div>
+                    <!-- Orders content here -->
+                </div>
+
+                <!-- Add more sections as needed -->
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        // Global Variables
+        let currentLanguage = 'ar';
+        let currentUser = null;
+        let isLoading = false;
+
+        // Initialize everything when document is ready
+        $(document).ready(function() {
+            // Initialize AOS animations
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true,
+                mirror: false
+            });
+
+            // Hide loading screen after delay
+            setTimeout(() => {
+                $('#loadingScreen').fadeOut(500);
+            }, 1500);
+
+            // Initialize all components
+            initializeNavbar();
+            initializeLanguage();
+            initializeAuth();
+            initializeAdmin();
+            initializeUI();
+            initializeAnimations();
+        });
+
+        // Enhanced Language System
+        function toggleLanguage() {
+            currentLanguage = currentLanguage === 'ar' ? 'en' : 'ar';
+            updateLanguage();
+            
+            // Show notification
+            showNotification(
+                currentLanguage === 'ar' ? 'تم تغيير اللغة إلى العربية' : 'Language changed to English',
+                'success'
+            );
+        }
+
+        function updateLanguage() {
+            const $elements = $('[data-ar][data-en]');
+            
+            // Update text content with animation
+            $elements.each(function() {
+                const $el = $(this);
+                const text = $el.attr(`data-${currentLanguage}`);
+                if (text && $el.text() !== text) {
+                    $el.fadeOut(200, function() {
+                        $el.text(text).fadeIn(200);
+                    });
+                }
+            });
+
+            // Update document properties
+            const $body = $('body');
+            const $html = $('html');
+            
+            if (currentLanguage === 'en') {
+                $body.addClass('en');
+                $html.attr('lang', 'en').attr('dir', 'ltr');
+            } else {
+                $body.removeClass('en');
+                $html.attr('lang', 'ar').attr('dir', 'rtl');
+            }
+
+            // Update language toggle button
+            $('.language-toggle span').text(currentLanguage === 'ar' ? 'EN' : 'AR');
+            
+            // Save language preference
+            localStorage.setItem('preferredLanguage', currentLanguage);
+        }
+
+        function initializeLanguage() {
+            // Load saved language preference
+            const savedLanguage = localStorage.getItem('preferredLanguage');
+            if (savedLanguage && savedLanguage !== currentLanguage) {
+                currentLanguage = savedLanguage;
+                updateLanguage();
+            }
+        }
+
+        // Enhanced Page Navigation with animations
+        function showPage(pageId) {
+            if (isLoading) return;
+            
+            isLoading = true;
+            const $currentPage = $('.page.active');
+            const $targetPage = $(`#${pageId}-page`);
+            
+            if ($targetPage.length === 0) {
+                isLoading = false;
+                return;
+            }
+
+            // Animate out current page
+            $currentPage.removeClass('active').fadeOut(300, function() {
+                // Animate in target page
+                $targetPage.addClass('active').fadeIn(300, function() {
+                    isLoading = false;
+                    
+                    // Refresh AOS animations for new page
+                    AOS.refresh();
+                    
+                    // Scroll to top
+                    $('html, body').animate({ scrollTop: 0 }, 500);
+                });
+            });
+
+            // Update URL
+            window.history.pushState({}, '', `#${pageId}`);
+            
+            // Close mobile navbar if open
+            $('.navbar-collapse').collapse('hide');
+        }
+
+        // Enhanced Authentication System
+        function initializeAuth() {
+            // Login form
+            $('#loginForm').on('submit', function(e) {
+                e.preventDefault();
+                handleLogin();
+            });
+
+            // Register form
+            $('#registerForm').on('submit', function(e) {
+                e.preventDefault();
+                handleRegister();
+            });
+
+            // Real-time validation
+            $('.form-control-enhanced').on('input blur', function() {
+                validateField($(this));
+            });
+        }
+
+        function handleLogin() {
+            const $form = $('#loginForm');
+            const $submitBtn = $form.find('button[type="submit"]');
+            const formData = {
+                email: $('#loginEmail').val(),
+                password: $('#loginPassword').val(),
+                remember: $('#rememberMe').is(':checked')
+            };
+
+            // Validate form
+            if (!validateLoginForm(formData)) return;
+
+            // Show loading state
+            $submitBtn.addClass('btn-loading').prop('disabled', true);
+
+            // Simulate API call
+            setTimeout(() => {
+                // Demo credentials
+                if (formData.email === 'admin@trendtrace.com' && formData.password === 'admin123') {
+                    currentUser = { email: formData.email, role: 'admin', name: 'المدير' };
+                    showPage('admin');
+                    updateNavForLoggedUser();
+                    showNotification('تم تسجيل الدخول بنجاح!', 'success');
+                } else if (formData.email === 'user@example.com' && formData.password === 'user123') {
+                    currentUser = { email: formData.email, role: 'user', name: 'المستخدم' };
+                    showPage('home');
+                    updateNavForLoggedUser();
+                    showNotification('تم تسجيل الدخول بنجاح!', 'success');
+                } else {
+                    showFieldError('#loginPassword', 'البريد الإلكتروني أو كلمة المرور غير صحيحة');
+                    showNotification('فشل في تسجيل الدخول', 'error');
+                }
+
+                $submitBtn.removeClass('btn-loading').prop('disabled', false);
+            }, 2000);
+        }
+
+        function handleRegister() {
+            const $form = $('#registerForm');
+            const $submitBtn = $form.find('button[type="submit"]');
+            const formData = {
+                firstName: $('#firstName').val(),
+                lastName: $('#lastName').val(),
+                email: $('#registerEmail').val(),
+                phone: $('#phoneNumber').val(),
+                password: $('#registerPassword').val(),
+                confirmPassword: $('#confirmPassword').val(),
+                agreeTerms: $('#agreeTerms').is(':checked')
+            };
+
+            // Validate form
+            if (!validateRegisterForm(formData)) return;
+
+            // Show loading state
+            $submitBtn.addClass('btn-loading').prop('disabled', true);
+
+            // Simulate API call
+            setTimeout(() => {
+                showNotification('تم إنشاء الحساب بنجاح!', 'success');
+                showPage('login');
+                $form[0].reset();
+                $submitBtn.removeClass('btn-loading').prop('disabled', false);
+            }, 2000);
+        }
+
+        function validateLoginForm(data) {
+            let isValid = true;
+
+            if (!validateEmail(data.email)) {
+                showFieldError('#loginEmail', 'البريد الإلكتروني غير صحيح');
+                isValid = false;
+            }
+
+            if (data.password.length < 6) {
+                showFieldError('#loginPassword', 'كلمة المرور يجب أن تكون 6 أحرف على الأقل');
+                isValid = false;
+            }
+
+            return isValid;
+        }
+
+        function validateRegisterForm(data) {
+            let isValid = true;
+
+            if (data.firstName.length < 2) {
+                showFieldError('#firstName', 'الاسم الأول يجب أن يكون حرفين على الأقل');
+                isValid = false;
+            }
+
+            if (data.lastName.length < 2) {
+                showFieldError('#lastName', 'الاسم الأخير يجب أن يكون حرفين على الأقل');
+                isValid = false;
+            }
+
+            if (!validateEmail(data.email)) {
+                showFieldError('#registerEmail', 'البريد الإلكتروني غير صحيح');
+                isValid = false;
+            }
+
+            if (!validatePhone(data.phone)) {
+                showFieldError('#phoneNumber', 'رقم الهاتف غير صحيح');
+                isValid = false;
+            }
+
+            if (data.password.length < 6) {
+                showFieldError('#registerPassword', 'كلمة المرور يجب أن تكون 6 أحرف على الأقل');
+                isValid = false;
+            }
+
+            if (data.password !== data.confirmPassword) {
+                showFieldError('#confirmPassword', 'كلمة المرور غير متطابقة');
+                isValid = false;
+            }
+
+            if (!data.agreeTerms) {
+                showFieldError('#agreeTerms', 'يجب الموافقة على الشروط والأحكام');
+                isValid = false;
+            }
+
+            return isValid;
+        }
+
+        function validateField($field) {
+            const fieldId = $field.attr('id');
+            const value = $field.val();
+            
+            clearFieldError($field);
+
+            switch (fieldId) {
+                case 'loginEmail':
+                case 'registerEmail':
+                    if (value && !validateEmail(value)) {
+                        showFieldError($field, 'البريد الإلكتروني غير صحيح');
+                    }
+                    break;
+                case 'phoneNumber':
+                    if (value && !validatePhone(value)) {
+                        showFieldError($field, 'رقم الهاتف غير صحيح');
+                    }
+                    break;
+                case 'confirmPassword':
+                    const password = $('#registerPassword').val();
+                    if (value && value !== password) {
+                        showFieldError($field, 'كلمة المرور غير متطابقة');
+                    }
+                    break;
+            }
+        }
+
+        function showFieldError(field, message) {
+            const $field = $(field);
+            const $feedback = $field.siblings('.invalid-feedback');
+            
+            $field.addClass('is-invalid');
+            $feedback.text(message);
+        }
+
+        function clearFieldError($field) {
+            $field.removeClass('is-invalid');
+            $field.siblings('.invalid-feedback').text('');
+        }
+
+        function validateEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        function validatePhone(phone) {
+            const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
+            return phoneRegex.test(phone.replace(/\s/g, ''));
+        }
+
+        function logout() {
+            currentUser = null;
+            showPage('home');
+            updateNavForLoggedUser();
+            showNotification('تم تسجيل الخروج بنجاح', 'success');
+        }
+
+        function updateNavForLoggedUser() {
+            const $authButtons = $('#authButtons');
+            
+            if (currentUser) {
+                $authButtons.html(`
+                    <div class="dropdown">
+                        <button class="btn btn-outline-custom dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-user me-2"></i>
+                            ${currentUser.name || currentUser.email.split('@')[0]}
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-user me-2"></i>الملف الشخصي</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-shopping-cart me-2"></i>طلباتي</a></li>
+                            ${currentUser.role === 'admin' ? '<li><a class="dropdown-item" href="#" onclick="showPage(\'admin\')"><i class="fas fa-cog me-2"></i>لوحة التحكم</a></li>' : ''}
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item text-danger" href="#" onclick="logout()"><i class="fas fa-sign-out-alt me-2"></i>تسجيل الخروج</a></li>
+                        </ul>
+                    </div>
+                `);
+            } else {
+                $authButtons.html(`
+                    <a href="#" class="btn btn-outline-custom" onclick="showPage('register')" data-ar="إنشاء حساب" data-en="Sign Up">إنشاء حساب</a>
+                    <a href="#" class="btn btn-primary-custom" onclick="showPage('login')" data-ar="تسجيل الدخول" data-en="Login">تسجيل الدخول</a>
+                `);
+            }
+            
+            updateLanguage();
+        }
+
+        // Enhanced Admin Dashboard
+        function initializeAdmin() {
+            // Admin navigation
+            $('.admin-nav-link').on('click', function(e) {
+                e.preventDefault();
+                const section = $(this).data('section');
+                if (section) {
+                    showAdminSection(section);
+                    $(this).addClass('active').siblings().removeClass('active');
+                }
+            });
+
+            // Mobile sidebar toggle
+            $('#fab').on('click', function() {
+                if (window.innerWidth <= 768) {
+                    $('#adminSidebar').toggleClass('show');
+                } else {
+                    startChat();
+                }
+            });
+
+            // Auto-hide sidebar on mobile when clicking outside
+            $(document).on('click', function(e) {
+                if (window.innerWidth <= 768) {
+                    const $sidebar = $('#adminSidebar');
+                    if ($sidebar.hasClass('show') && !$sidebar.is(e.target) && $sidebar.has(e.target).length === 0) {
+                        $sidebar.removeClass('show');
+                    }
+                }
+            });
+        }
+
+        function showAdminSection(sectionId) {
+            // Hide all sections with animation
+            $('.admin-section').fadeOut(200, function() {
+                // Show target section
+                $(`#${sectionId}-section`).fadeIn(300);
+            });
+        }
+
+        // Enhanced UI Components
+        function initializeUI() {
+            // FAQ toggles
+            $('.faq-question').on('click', function() {
+                const $item = $(this).parent();
+                const $answer = $item.find('.faq-answer');
+                
+                if ($item.hasClass('active')) {
+                    $item.removeClass('active');
+                    $answer.slideUp(300);
+                } else {
+                    $('.faq-item.active').removeClass('active').find('.faq-answer').slideUp(300);
+                    $item.addClass('active');
+                    $answer.slideDown(300);
+                }
+            });
+
+            // Back to top button
+            $(window).on('scroll', function() {
+                const $backToTop = $('#backToTop');
+                if ($(this).scrollTop() > 500) {
+                    $backToTop.addClass('show');
+                } else {
+                    $backToTop.removeClass('show');
+                }
+            });
+
+            $('#backToTop').on('click', function() {
+                $('html, body').animate({ scrollTop: 0 }, 800);
+            });
+
+            // Floating action button (chat)
+            $('#fab').attr('title', currentLanguage === 'ar' ? 'مساعدة' : 'Help');
+        }
+
+        function initializeNavbar() {
+            // Navbar scroll effect
+            $(window).on('scroll', function() {
+                const $navbar = $('#mainNavbar');
+                if ($(this).scrollTop() > 50) {
+                    $navbar.addClass('scrolled');
+                } else {
+                    $navbar.removeClass('scrolled');
+                }
+            });
+
+            // Smooth scrolling for anchor links
+            $('a[href^="#"]').on('click', function(e) {
+                const href = $(this).attr('href');
+                if (href !== '#' && href.length > 1 && !href.includes('page')) {
+                    e.preventDefault();
+                    const $target = $(href);
+                    if ($target.length) {
+                        const offsetTop = $target.offset().top - 80;
+                        $('html, body').animate({
+                            scrollTop: offsetTop
+                        }, 800, 'easeInOutCubic');
+                    }
+                }
+            });
+        }
+
+        function initializeAnimations() {
+            // Counter animation for statistics
+            function animateCounters() {
+                $('.stats-number[data-count]').each(function() {
+                    const $this = $(this);
+                    const target = parseInt($this.data('count'));
+                    $this.prop('Counter', 0).animate({
+                        Counter: target
+                    }, {
+                        duration: 2000,
+                        easing: 'swing',
+                        step: function(now) {
+                            $this.text(Math.ceil(now).toLocaleString());
+                        }
+                    });
+                });
+            }
+
+            // Trigger counter animation when stats section is visible
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounters();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            });
+
+            const statsSection = document.querySelector('.stats-section');
+            if (statsSection) {
+                observer.observe(statsSection);
+            }
+
+            // Parallax effect for hero section
+            $(window).on('scroll', function() {
+                const scrolled = $(this).scrollTop();
+                const $hero = $('.hero');
+                if ($hero.length) {
+                    $hero.css('transform', `translateY(${scrolled * 0.5}px)`);
+                }
+            });
+        }
+
+        // Enhanced Notification System
+        function showNotification(message, type = 'success') {
+            const $notification = $('#notification');
+            const $text = $('#notificationText');
+            const $icon = $notification.find('i');
+            
+            // Update content
+            $text.text(message);
+            
+            // Update icon and style based on type
+            $notification.removeClass('success error').addClass(type);
+            if (type === 'success') {
+                $icon.removeClass().addClass('fas fa-check-circle me-2');
+            } else if (type === 'error') {
+                $icon.removeClass().addClass('fas fa-exclamation-circle me-2');
+            }
+            
+            // Show notification
+            $notification.addClass('show');
+            
+            // Auto hide after 4 seconds
+            setTimeout(() => {
+                hideNotification();
+            }, 4000);
+        }
+
+        function hideNotification() {
+            $('#notification').removeClass('show');
+        }
+
+        // Chat functionality
+        function startChat() {
+            showNotification('ميزة الدردشة قريباً!', 'success');
+        }
+
+        // Utility Functions
+        function formatCurrency(amount) {
+            return new Intl.NumberFormat('en-US', {
+                style: 'currency',
+                currency: 'USD'
+            }).format(amount);
+        }
+
+        function formatDate(date) {
+            return new Intl.DateTimeFormat(currentLanguage === 'ar' ? 'ar-EG' : 'en-US').format(new Date(date));
+        }
+
+        // Handle browser back/forward
+        window.addEventListener('popstate', function() {
+            const hash = window.location.hash.substring(1);
+            if (hash && hash !== 'home') {
+                showPage(hash);
+            } else {
+                showPage('home');
+            }
+        });
+
+        // Keyboard shortcuts
+        $(document).on('keydown', function(e) {
+            // Alt + L for language toggle
+            if (e.altKey && e.keyCode === 76) {
+                e.preventDefault();
+                toggleLanguage();
+            }
+            
+            // Escape to close modals/dropdowns
+            if (e.keyCode === 27) {
+                $('.dropdown-menu').removeClass('show');
+                hideNotification();
+            }
+        });
+
+        // Performance optimization: debounce resize events
+        let resizeTimer;
+        $(window).on('resize', function() {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => {
+                AOS.refresh();
+            }, 250);
+        });
+
+        // Add easing function for smooth scrolling
+        $.easing.easeInOutCubic = function (x, t, b, c, d) {
+            if ((t/=d/2) < 1) return c/2*t*t*t + b;
+            return c/2*((t-=2)*t*t + 2) + b;
+        };
+    </script>
+</body>
+</html><!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
@@ -212,6 +1269,22 @@
             transform: translateY(-2px);
         }
 
+        .navbar-nav .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 5px;
+            left: 50%;
+            background: var(--primary-green);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .navbar-nav .nav-link:hover::after {
+            width: 80%;
+        }
+
         .language-toggle {
             background: var(--gradient-primary);
             border: none;
@@ -237,6 +1310,21 @@
             border: none;
             position: relative;
             overflow: hidden;
+        }
+
+        .btn-custom::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .btn-custom:hover::before {
+            left: 100%;
         }
 
         .btn-primary-custom {
@@ -284,7 +1372,6 @@
             align-items: center;
             position: relative;
             overflow: hidden;
-            padding-top: 80px;
         }
 
         .hero::before {
@@ -331,6 +1418,42 @@
             flex-wrap: wrap;
         }
 
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .floating-elements::before,
+        .floating-elements::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            animation: floatUpDown 4s ease-in-out infinite;
+        }
+
+        .floating-elements::before {
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .floating-elements::after {
+            top: 60%;
+            right: 15%;
+            animation-delay: 2s;
+        }
+
+        @keyframes floatUpDown {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+
         /* Enhanced Sections */
         .section-divider {
             height: 100px;
@@ -370,6 +1493,21 @@
             position: relative;
         }
 
+        .card-enhanced::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(168, 230, 100, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .card-enhanced:hover::before {
+            left: 100%;
+        }
+
         .card-enhanced:hover {
             transform: translateY(-15px) scale(1.02);
             box-shadow: var(--shadow-xl);
@@ -384,6 +1522,333 @@
             font-size: 4rem;
             position: relative;
             overflow: hidden;
+        }
+
+        .collection-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1));
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--red);
+            color: var(--white);
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .product-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+        }
+
+        /* Enhanced Forms */
+        .auth-container {
+            background: var(--white);
+            border-radius: 25px;
+            box-shadow: var(--shadow-xl);
+            padding: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .auth-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: var(--gradient-primary);
+        }
+
+        .form-control-enhanced {
+            border: 2px solid #e5e7eb;
+            border-radius: 15px;
+            padding: 15px 20px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background: var(--white);
+        }
+
+        .form-control-enhanced:focus {
+            border-color: var(--primary-green);
+            box-shadow: 0 0 0 0.2rem rgba(168, 230, 100, 0.25);
+            transform: translateY(-2px);
+        }
+
+        .form-floating-enhanced {
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-floating-enhanced label {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            background: var(--white);
+            padding: 0 10px;
+            color: var(--gray-medium);
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+
+        body.en .form-floating-enhanced label {
+            right: auto;
+            left: 20px;
+        }
+
+        .form-floating-enhanced input:focus + label,
+        .form-floating-enhanced input:not(:placeholder-shown) + label {
+            top: 0;
+            font-size: 0.85rem;
+            color: var(--primary-green);
+        }
+
+        /* Enhanced Admin Dashboard */
+        .admin-sidebar {
+            background: var(--white);
+            box-shadow: var(--shadow-lg);
+            border-radius: 0 25px 25px 0;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        body.en .admin-sidebar {
+            border-radius: 25px 0 0 25px;
+        }
+
+        .sidebar-menu .nav-link {
+            color: var(--black);
+            padding: 15px 25px;
+            margin: 5px 15px;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .sidebar-menu .nav-link:hover,
+        .sidebar-menu .nav-link.active {
+            background: var(--gradient-primary);
+            color: var(--black);
+            transform: translateX(5px);
+        }
+
+        body.en .sidebar-menu .nav-link:hover,
+        body.en .sidebar-menu .nav-link.active {
+            transform: translateX(-5px);
+        }
+
+        .stat-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-icon {
+            font-size: 3rem;
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+        }
+
+        /* Enhanced Tables */
+        .table-enhanced {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .table-enhanced .table {
+            margin-bottom: 0;
+        }
+
+        .table-enhanced th {
+            background: var(--gray-light);
+            font-weight: 600;
+            border: none;
+            padding: 20px;
+        }
+
+        .table-enhanced td {
+            padding: 20px;
+            border: none;
+            border-bottom: 1px solid #f1f3f4;
+        }
+
+        .table-enhanced tbody tr {
+            transition: all 0.3s ease;
+        }
+
+        .table-enhanced tbody tr:hover {
+            background: rgba(168, 230, 100, 0.05);
+            transform: scale(1.01);
+        }
+
+        .status-badge {
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .status-active {
+            background: #d1fae5;
+            color: #065f46;
+        }
+
+        .status-pending {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .status-inactive {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            background: var(--white);
+            border-radius: 15px;
+            margin-bottom: 1rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 10px 25px rgba(168, 230, 100, 0.2);
+        }
+
+        .faq-question {
+            padding: 1.5rem 2rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: rgba(168, 230, 100, 0.05);
+        }
+
+        .faq-toggle {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background: var(--primary-green);
+            color: var(--black);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+            background: var(--black);
+            color: var(--white);
+        }
+
+        .faq-answer {
+            padding: 0 2rem 2rem;
+            color: var(--gray-medium);
+            line-height: 1.7;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+            animation: fadeInDown 0.3s ease;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: var(--gradient-dark);
+            color: var(--white);
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="%23A8E664" opacity="0.1"/><circle cx="80" cy="40" r="3" fill="%23A8E664" opacity="0.1"/><circle cx="40" cy="80" r="2" fill="%23A8E664" opacity="0.1"/></svg>');
+        }
+
+        .contact-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 2rem;
+            border: 1px solid rgba(255,255,255,0.2);
         }
 
         /* Footer */
@@ -411,6 +1876,10 @@
         .footer-links a:hover {
             color: var(--primary-green);
             transform: translateX(5px);
+        }
+
+        body.en .footer-links a:hover {
+            transform: translateX(-5px);
         }
 
         .social-icons {
@@ -447,12 +1916,91 @@
                 font-size: 2rem;
             }
 
+            .admin-sidebar {
+                transform: translateX(-100%);
+                position: fixed;
+                top: 76px;
+                left: 0;
+                height: calc(100vh - 76px);
+                z-index: 1000;
+                border-radius: 0 25px 0 0;
+            }
+
+            body.en .admin-sidebar {
+                transform: translateX(100%);
+                right: 0;
+                left: auto;
+                border-radius: 25px 0 0 0;
+            }
+
+            .admin-sidebar.show {
+                transform: translateX(0);
+            }
+
             .hero-buttons {
                 justify-content: center;
             }
+
+            .auth-container {
+                margin: 1rem;
+                padding: 2rem;
+            }
         }
 
-        /* Notification */
+        /* Custom Animations */
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes bounceIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.3);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+            70% {
+                transform: scale(0.9);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .animate-slide-right {
+            animation: slideInRight 0.6s ease-out;
+        }
+
+        .animate-slide-left {
+            animation: slideInLeft 0.6s ease-out;
+        }
+
+        .animate-bounce-in {
+            animation: bounceIn 0.8s ease-out;
+        }
+
+        /* Notification System */
         .notification {
             position: fixed;
             top: 100px;
@@ -465,6 +2013,14 @@
             z-index: 2000;
             transform: translateX(400px);
             transition: transform 0.3s ease;
+        }
+
+        body.en .notification {
+            right: auto;
+            left: 20px;
+            border-left: none;
+            border-right: 4px solid var(--primary-green);
+            transform: translateX(-400px);
         }
 
         .notification.show {
@@ -499,9 +2055,50 @@
             z-index: 1000;
         }
 
+        body.en .fab {
+            right: auto;
+            left: 30px;
+        }
+
         .fab:hover {
             transform: scale(1.1);
             box-shadow: 0 8px 30px rgba(168, 230, 100, 0.6);
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--black);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transform: translateY(100px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        body.en .back-to-top {
+            right: auto;
+            left: 30px;
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            background: var(--primary-green);
+            color: var(--black);
+            transform: translateY(-5px);
         }
 
         /* Features Section */
@@ -534,6 +2131,345 @@
         .feature-card:hover .feature-icon {
             transform: scale(1.1) rotate(10deg);
         }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: -20px;
+            right: 20px;
+            font-size: 4rem;
+            color: var(--primary-green);
+            font-family: serif;
+        }
+
+        body.en .testimonial-card::before {
+            right: auto;
+            left: 20px;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .testimonial-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: var(--black);
+        }
+
+        .stars {
+            color: #FFD700;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        /* How it Works Section */
+        .how-it-works {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .step-card {
+            text-align: center;
+            position: relative;
+            padding: 2rem;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--black);
+            position: relative;
+            z-index: 2;
+        }
+
+        .step-connector {
+            position: absolute;
+            top: 40px;
+            right: -50%;
+            width: 100%;
+            height: 2px;
+            background: var(--primary-green);
+            z-index: 1;
+        }
+
+        body.en .step-connector {
+            right: auto;
+            left: -50%;
+        }
+
+        .step-card:last-child .step-connector {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .step-connector {
+                display: none;
+            }
+        }
+
+        /* Pricing Section */
+        .pricing-section {
+            padding: 100px 0;
+            background: var(--gray-light);
+        }
+
+        .pricing-card {
+            background: var(--white);
+            border-radius: 25px;
+            padding: 2.5rem;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card.featured {
+            background: var(--gradient-primary);
+            color: var(--black);
+            transform: scale(1.05);
+        }
+
+        .pricing-card.featured::before {
+            content: 'الأكثر شعبية';
+            position: absolute;
+            top: 20px;
+            right: -30px;
+            background: var(--red);
+            color: var(--white);
+            padding: 5px 40px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            transform: rotate(45deg);
+        }
+
+        body.en .pricing-card.featured::before {
+            content: 'Most Popular';
+            right: auto;
+            left: -30px;
+            transform: rotate(-45deg);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .pricing-card.featured:hover {
+            transform: translateY(-10px) scale(1.05);
+        }
+
+        .pricing-price {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary-green);
+            margin: 1rem 0;
+        }
+
+        .pricing-card.featured .pricing-price {
+            color: var(--black);
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .pricing-features li {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .pricing-features li::before {
+            content: '✓';
+            color: var(--primary-green);
+            font-weight: bold;
+            width: 20px;
+        }
+
+        /* Statistics Section */
+        .stats-section {
+            padding: 80px 0;
+            background: var(--gradient-dark);
+            color: var(--white);
+        }
+
+        .stats-card {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .stats-number {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: var(--primary-green);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .stats-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Modal Styles */
+        .modal-content {
+            border: none;
+            border-radius: 20px;
+            box-shadow: var(--shadow-xl);
+        }
+
+        .modal-header {
+            background: var(--gradient-primary);
+            color: var(--black);
+            border-radius: 20px 20px 0 0;
+            border-bottom: none;
+        }
+
+        .modal-body {
+            padding: 2rem;
+        }
+
+        /* Custom Dropdown */
+        .dropdown-menu {
+            border: none;
+            border-radius: 15px;
+            box-shadow: var(--shadow-lg);
+            padding: 0.5rem;
+        }
+
+        .dropdown-item {
+            border-radius: 10px;
+            margin-bottom: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .dropdown-item:hover {
+            background: var(--primary-green);
+            color: var(--black);
+            transform: translateX(5px);
+        }
+
+        body.en .dropdown-item:hover {
+            transform: translateX(-5px);
+        }
+
+        /* Progress Bars */
+        .progress-custom {
+            height: 10px;
+            border-radius: 10px;
+            background: #e5e7eb;
+            overflow: hidden;
+        }
+
+        .progress-bar-custom {
+            background: var(--gradient-primary);
+            height: 100%;
+            border-radius: 10px;
+            transition: width 0.3s ease;
+        }
+
+        /* Badges */
+        .badge-custom {
+            background: var(--gradient-primary);
+            color: var(--black);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        /* Tooltips */
+        .tooltip-inner {
+            background: var(--black);
+            border-radius: 10px;
+            font-weight: 500;
+        }
+
+        .tooltip-arrow::before {
+            border-top-color: var(--black) !important;
+        }
+
+        /* Loading States */
+        .btn-loading {
+            position: relative;
+            color: transparent !important;
+        }
+
+        .btn-loading::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 20px;
+            height: 20px;
+            border: 2px solid transparent;
+            border-top: 2px solid currentColor;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        /* Mobile Optimizations */
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .auth-container {
+                padding: 1.5rem;
+            }
+
+            .card-enhanced {
+                margin-bottom: 1rem;
+            }
+
+            .stats-number {
+                font-size: 2.5rem;
+            }
+
+            .pricing-card {
+                margin-bottom: 2rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -543,6 +2479,11 @@
             <div class="loading-spinner"></div>
             <div class="loading-text" data-ar="جارٍ التحميل..." data-en="Loading...">جارٍ التحميل...</div>
         </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
     </div>
 
     <!-- Floating Action Button -->
@@ -582,7 +2523,10 @@
                         <a class="nav-link" href="#collections" data-ar="المجموعات" data-en="Collections">المجموعات</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#features" data-ar="المميزات" data-en="Features">المميزات</a>
+                        <a class="nav-link" href="#how-it-works" data-ar="كيف يعمل" data-en="How it Works">كيف يعمل</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pricing" data-ar="الأسعار" data-en="Pricing">الأسعار</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact" data-ar="تواصل معنا" data-en="Contact">تواصل معنا</a>
@@ -596,8 +2540,8 @@
                     </button>
                     
                     <div id="authButtons" class="d-flex gap-2">
-                        <a href="#" class="btn btn-outline-custom" data-ar="إنشاء حساب" data-en="Sign Up">إنشاء حساب</a>
-                        <a href="#" class="btn btn-primary-custom" data-ar="تسجيل الدخول" data-en="Login">تسجيل الدخول</a>
+                        <a href="#" class="btn btn-outline-custom" onclick="showPage('register')" data-ar="إنشاء حساب" data-en="Sign Up">إنشاء حساب</a>
+                        <a href="#" class="btn btn-primary-custom" onclick="showPage('login')" data-ar="تسجيل الدخول" data-en="Login">تسجيل الدخول</a>
                     </div>
                 </div>
             </div>
@@ -608,6 +2552,7 @@
     <div id="home-page" class="page active">
         <!-- Enhanced Hero Section -->
         <section class="hero" id="hero">
+            <div class="floating-elements"></div>
             <div class="container">
                 <div class="row align-items-center min-vh-100">
                     <div class="col-lg-6" data-aos="fade-right">
@@ -615,11 +2560,11 @@
                             <h1 data-ar="ابدأ رحلتك في الطباعة حسب الطلب" data-en="Start Your Print-on-Demand Journey">ابدأ رحلتك في الطباعة حسب الطلب</h1>
                             <p data-ar="أنشئ علامتك التجارية الفريدة مع تريند تريس واختر من مجموعة واسعة من المنتجات عالية الجودة للطباعة والتخصيص" data-en="Create your unique brand with TrendTrace and choose from a wide range of high-quality products for printing and customization">أنشئ علامتك التجارية الفريدة مع تريند تريس واختر من مجموعة واسعة من المنتجات عالية الجودة للطباعة والتخصيص</p>
                             <div class="hero-buttons">
-                                <a href="#" class="btn btn-dark-custom btn-lg" data-ar="ابدأ البيع الآن" data-en="Start Selling Now">
+                                <a href="#" class="btn btn-dark-custom btn-lg" onclick="showPage('register')" data-ar="ابدأ البيع الآن" data-en="Start Selling Now">
                                     <i class="fas fa-rocket me-2"></i>
                                     ابدأ البيع الآن
                                 </a>
-                                <a href="#features" class="btn btn-outline-custom btn-lg" data-ar="كيف يعمل؟" data-en="How it Works?">
+                                <a href="#how-it-works" class="btn btn-outline-custom btn-lg" data-ar="كيف يعمل؟" data-en="How it Works?">
                                     <i class="fas fa-play me-2"></i>
                                     كيف يعمل؟
                                 </a>
@@ -791,8 +2736,286 @@
             </div>
         </section>
 
+        <!-- How It Works Section -->
+        <section class="how-it-works" id="how-it-works">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up" data-ar="كيف يعمل تريند تريس؟" data-en="How Does TrendTrace Work?">كيف يعمل تريند تريس؟</h2>
+                <div class="row g-4">
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="step-card">
+                            <div class="step-number">1</div>
+                            <div class="step-connector"></div>
+                            <h4 data-ar="اختر المنتج" data-en="Choose Product">اختر المنتج</h4>
+                            <p data-ar="تصفح كتالوجنا الواسع واختر المنتج المناسب لتصميمك من أكثر من 50 منتج مختلف" data-en="Browse our extensive catalog and choose the right product for your design">تصفح كتالوجنا الواسع واختر المنتج المناسب لتصميمك من أكثر من 50 منتج مختلف</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="step-card">
+                            <div class="step-number">2</div>
+                            <div class="step-connector"></div>
+                            <h4 data-ar="صمم منتجك" data-en="Design Product">صمم منتجك</h4>
+                            <p data-ar="استخدم أداة التصميم السهلة لرفع تصميمك وتخصيص المنتج حسب رؤيتك الإبداعية" data-en="Use our easy design tool to upload your design and customize the product">استخدم أداة التصميم السهلة لرفع تصميمك وتخصيص المنتج حسب رؤيتك الإبداعية</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="step-card">
+                            <div class="step-number">3</div>
+                            <h4 data-ar="ابدأ البيع" data-en="Start Selling">ابدأ البيع</h4>
+                            <p data-ar="احفظ تصميمك وابدأ في تسويق المنتج. عند وصول طلب، سنطبع وننتج ونشحن المنتج نيابة عنك" data-en="Save your design and start marketing. When orders come, we print, produce, and ship for you">احفظ تصميمك وابدأ في تسويق المنتج. عند وصول طلب، سنطبع وننتج ونشحن المنتج نيابة عنك</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up" data-ar="المنتجات الأكثر مبيعاً" data-en="Best Selling Products">المنتجات الأكثر مبيعاً</h2>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card card-enhanced h-100">
+                            <div class="collection-image">
+                                <i class="fas fa-mobile-alt"></i>
+                                <div class="product-badge" data-ar="الأكثر مبيعاً" data-en="Best Seller">الأكثر مبيعاً</div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title" data-ar="أغطية الهواتف المخصصة" data-en="Custom Phone Cases">أغطية الهواتف المخصصة</h5>
+                                <p class="card-text" data-ar="حماية أنيقة ومتينة لهاتفك مع إمكانية إضافة تصميمك الشخصي المميز" data-en="Stylish and durable protection for your phone with custom designs">حماية أنيقة ومتينة لهاتفك مع إمكانية إضافة تصميمك الشخصي المميز</p>
+                                <div class="product-price">$15.99</div>
+                                <a href="#" class="btn btn-primary-custom w-100">
+                                    <i class="fas fa-cart-plus me-2"></i>
+                                    <span data-ar="اطلب الآن" data-en="Order Now">اطلب الآن</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card card-enhanced h-100">
+                            <div class="collection-image">
+                                <i class="fas fa-coffee"></i>
+                                <div class="product-badge bg-warning text-dark" data-ar="جديد" data-en="New">جديد</div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title" data-ar="أكواب مخصصة" data-en="Custom Mugs">أكواب مخصصة</h5>
+                                <p class="card-text" data-ar="ابدأ يومك بكوب قهوة مميز مع تصميمك الخاص أو رسالتك المفضلة" data-en="Start your day with a special coffee mug featuring your custom design">ابدأ يومك بكوب قهوة مميز مع تصميمك الخاص أو رسالتك المفضلة</p>
+                                <div class="product-price">$12.99</div>
+                                <a href="#" class="btn btn-primary-custom w-100">
+                                    <i class="fas fa-cart-plus me-2"></i>
+                                    <span data-ar="اطلب الآن" data-en="Order Now">اطلب الآن</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card card-enhanced h-100">
+                            <div class="collection-image">
+                                <i class="fas fa-tshirt"></i>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title" data-ar="تيشيرتات مطبوعة" data-en="Printed T-Shirts">تيشيرتات مطبوعة</h5>
+                                <p class="card-text" data-ar="تيشيرتات عالية الجودة مع طباعة احترافية تدوم طويلاً وألوان زاهية" data-en="High-quality t-shirts with professional printing and vibrant colors">تيشيرتات عالية الجودة مع طباعة احترافية تدوم طويلاً وألوان زاهية</p>
+                                <div class="product-price">$18.99</div>
+                                <a href="#" class="btn btn-primary-custom w-100">
+                                    <i class="fas fa-cart-plus me-2"></i>
+                                    <span data-ar="اطلب الآن" data-en="Order Now">اطلب الآن</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="pricing-section" id="pricing">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up" data-ar="خطط الأسعار" data-en="Pricing Plans">خطط الأسعار</h2>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="pricing-card">
+                            <h4 data-ar="المبتدئ" data-en="Starter">المبتدئ</h4>
+                            <div class="pricing-price">مجاني</div>
+                            <ul class="pricing-features">
+                                <li data-ar="5 منتجات شهرياً" data-en="5 products per month">5 منتجات شهرياً</li>
+                                <li data-ar="طباعة أساسية" data-en="Basic printing">طباعة أساسية</li>
+                                <li data-ar="دعم عبر البريد" data-en="Email support">دعم عبر البريد</li>
+                                <li data-ar="تقارير أساسية" data-en="Basic reports">تقارير أساسية</li>
+                            </ul>
+                            <a href="#" class="btn btn-outline-custom w-100" data-ar="ابدأ مجاناً" data-en="Start Free">ابدأ مجاناً</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="pricing-card featured">
+                            <h4 data-ar="المحترف" data-en="Professional">المحترف</h4>
+                            <div class="pricing-price">$29<span style="font-size: 1rem;">/شهر</span></div>
+                            <ul class="pricing-features">
+                                <li data-ar="منتجات لامحدودة" data-en="Unlimited products">منتجات لامحدودة</li>
+                                <li data-ar="طباعة عالية الجودة" data-en="Premium printing">طباعة عالية الجودة</li>
+                                <li data-ar="دعم أولوية" data-en="Priority support">دعم أولوية</li>
+                                <li data-ar="تحليلات متقدمة" data-en="Advanced analytics">تحليلات متقدمة</li>
+                                <li data-ar="أدوات تسويق" data-en="Marketing tools">أدوات تسويق</li>
+                            </ul>
+                            <a href="#" class="btn btn-dark-custom w-100" data-ar="ابدأ الآن" data-en="Get Started">ابدأ الآن</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="pricing-card">
+                            <h4 data-ar="المؤسسة" data-en="Enterprise">المؤسسة</h4>
+                            <div class="pricing-price">$99<span style="font-size: 1rem;">/شهر</span></div>
+                            <ul class="pricing-features">
+                                <li data-ar="حلول مخصصة" data-en="Custom solutions">حلول مخصصة</li>
+                                <li data-ar="طباعة متميزة" data-en="Premium printing">طباعة متميزة</li>
+                                <li data-ar="مدير حساب مخصص" data-en="Dedicated account manager">مدير حساب مخصص</li>
+                                <li data-ar="تكامل API" data-en="API integration">تكامل API</li>
+                                <li data-ar="تدريب مخصص" data-en="Custom training">تدريب مخصص</li>
+                            </ul>
+                            <a href="#" class="btn btn-outline-custom w-100" data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics Section -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="row g-4 text-center">
+                    <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="stats-card">
+                            <span class="stats-number" data-count="50000">0</span>
+                            <div class="stats-label" data-ar="منتج مطبوع" data-en="Products Printed">منتج مطبوع</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="stats-card">
+                            <span class="stats-number" data-count="5000">0</span>
+                            <div class="stats-label" data-ar="عميل سعيد" data-en="Happy Customers">عميل سعيد</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="stats-card">
+                            <span class="stats-number" data-count="99">0</span>
+                            <div class="stats-label" data-ar="% معدل الرضا" data-en="% Satisfaction Rate">% معدل الرضا</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="stats-card">
+                            <span class="stats-number" data-count="24">0</span>
+                            <div class="stats-label" data-ar="ساعة شحن سريع" data-en="Hour Fast Shipping">ساعة شحن سريع</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up" data-ar="ماذا يقول عملاؤنا" data-en="What Our Customers Say">ماذا يقول عملاؤنا</h2>
+                <div class="row g-4">
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="testimonial-card">
+                            <div class="testimonial-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="stars">★★★★★</div>
+                            <p data-ar="خدمة رائعة وجودة ممتازة! تريند تريس ساعدني في بناء علامتي التجارية بسهولة" data-en="Amazing service and excellent quality! TrendTrace helped me build my brand easily">خدمة رائعة وجودة ممتازة! تريند تريس ساعدني في بناء علامتي التجارية بسهولة</p>
+                            <h6>أحمد محمد</h6>
+                            <small class="text-muted" data-ar="مصمم جرافيك" data-en="Graphic Designer">مصمم جرافيك</small>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="testimonial-card">
+                            <div class="testimonial-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="stars">★★★★★</div>
+                            <p data-ar="أسعار عادلة وشحن سريع. أنصح بشدة لكل من يريد البدء في الطباعة حسب الطلب" data-en="Fair prices and fast shipping. Highly recommend for anyone starting in print-on-demand">أسعار عادلة وشحن سريع. أنصح بشدة لكل من يريد البدء في الطباعة حسب الطلب</p>
+                            <h6>فاطمة علي</h6>
+                            <small class="text-muted" data-ar="رائدة أعمال" data-en="Entrepreneur">رائدة أعمال</small>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="testimonial-card">
+                            <div class="testimonial-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="stars">★★★★★</div>
+                            <p data-ar="دعم عملاء متميز وحلول إبداعية. تجربة لا تُنسى مع تريند تريس" data-en="Outstanding customer support and creative solutions. Unforgettable experience with TrendTrace">دعم عملاء متميز وحلول إبداعية. تجربة لا تُنسى مع تريند تريس</p>
+                            <h6>محمود حسن</h6>
+                            <small class="text-muted" data-ar="مدير متجر" data-en="Store Manager">مدير متجر</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6" data-aos="fade-right">
+                        <h2 class="display-6 fw-bold mb-4" data-ar="الأسئلة الشائعة" data-en="Frequently Asked Questions">الأسئلة الشائعة</h2>
+                        <p class="lead" data-ar="كل ما تحتاج لمعرفته حول خدمات تريند تريس والفوترة والطباعة" data-en="Everything you need to know about TrendTrace services, billing, and printing">كل ما تحتاج لمعرفته حول خدمات تريند تريس والفوترة والطباعة</p>
+                    </div>
+                    <div class="col-lg-6" data-aos="fade-left">
+                        <div class="faq-container">
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <span data-ar="متى يمكنني طلب سحب رصيدي؟" data-en="When can I request to withdraw my balance?">متى يمكنني طلب سحب رصيدي؟</span>
+                                    <div class="faq-toggle">+</div>
+                                </div>
+                                <div class="faq-answer">
+                                    <span data-ar="عندما تضع طلباً، فإنك مدين لنا بتكلفة الطلب حتى يدفع عميلك إجمالي طلبك وننتقص تكلفتنا" data-en="When you place an order, you owe us the order cost until your customer pays and we deduct our cost">عندما تضع طلباً، فإنك مدين لنا بتكلفة الطلب حتى يدفع عميلك إجمالي طلبك وننتقص تكلفتنا</span>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <span data-ar="هل يمكن لتريند تريس تنفيذ هدايا الأعمال؟" data-en="Can TrendTrace fulfill business giveaways?">هل يمكن لتريند تريس تنفيذ هدايا الأعمال؟</span>
+                                    <div class="faq-toggle">+</div>
+                                </div>
+                                <div class="faq-answer">
+                                    <span data-ar="بالطبع! يمكننا مساعدة الشركات في إنشاء بضائع ذات علامة تجارية مميزة" data-en="Absolutely! We can help companies create branded merchandise">بالطبع! يمكننا مساعدة الشركات في إنشاء بضائع ذات علامة تجارية مميزة</span>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <span data-ar="من يمكنه استخدام تريند تريس؟" data-en="Who can use TrendTrace?">من يمكنه استخدام تريند تريس؟</span>
+                                    <div class="faq-toggle">+</div>
+                                </div>
+                                <div class="faq-answer">
+                                    <span data-ar="يمكن لرواد الأعمال والمصممين والفنانين وصناع المحتوى استخدام منصتنا" data-en="Entrepreneurs, designers, artists, and content creators can use our platform">يمكن لرواد الأعمال والمصممين والفنانين وصناع المحتوى استخدام منصتنا</span>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <span data-ar="هل يمكنني طلب عينة؟" data-en="Can I request a sample?">هل يمكنني طلب عينة؟</span>
+                                    <div class="faq-toggle">+</div>
+                                </div>
+                                <div class="faq-answer">
+                                    <span data-ar="نعم بالتأكيد! يمكنك إنشاء طلب واختيار شحنه إليك لمعاينة الجودة" data-en="Yes absolutely! You can create an order and choose to ship it to yourself for quality preview">نعم بالتأكيد! يمكنك إنشاء طلب واختيار شحنه إليك لمعاينة الجودة</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Contact Section -->
-        <section class="py-5" id="contact" style="background: var(--gradient-dark); color: var(--white);">
+        <section class="contact-section" id="contact">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 text-center" data-aos="fade-up">
@@ -801,8 +3024,8 @@
                         
                         <div class="row g-4 mt-4">
                             <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                                <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(20px); border-radius: 20px; padding: 2rem; border: 1px solid rgba(255,255,255,0.2);">
-                                    <i class="fas fa-envelope fa-2x mb-3" style="color: var(--primary-green);"></i>
+                                <div class="contact-card">
+                                    <i class="fas fa-envelope fa-2x mb-3"></i>
                                     <h5 data-ar="راسلنا" data-en="Email Us">راسلنا</h5>
                                     <a href="mailto:info@trendtrace.com" class="btn btn-primary-custom">
                                         info@trendtrace.com
@@ -811,8 +3034,8 @@
                             </div>
                             
                             <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                                <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(20px); border-radius: 20px; padding: 2rem; border: 1px solid rgba(255,255,255,0.2);">
-                                    <i class="fas fa-phone fa-2x mb-3" style="color: var(--primary-green);"></i>
+                                <div class="contact-card">
+                                    <i class="fas fa-phone fa-2x mb-3"></i>
                                     <h5 data-ar="اتصل بنا" data-en="Call Us">اتصل بنا</h5>
                                     <a href="tel:+201234567890" class="btn btn-primary-custom">
                                         +201010024596
@@ -821,8 +3044,8 @@
                             </div>
                             
                             <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-                                <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(20px); border-radius: 20px; padding: 2rem; border: 1px solid rgba(255,255,255,0.2);">
-                                    <i class="fas fa-comments fa-2x mb-3" style="color: var(--primary-green);"></i>
+                                <div class="contact-card">
+                                    <i class="fas fa-comments fa-2x mb-3"></i>
                                     <h5 data-ar="دردشة مباشرة" data-en="Live Chat">دردشة مباشرة</h5>
                                     <button class="btn btn-primary-custom" onclick="startChat()">
                                         <span data-ar="ابدأ المحادثة" data-en="Start Chat">ابدأ المحادثة</span>
@@ -850,16 +3073,16 @@
                         <div class="social-icons">
                             <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
                             <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
                             <a href="https://wtspee.com/201010024596" class="social-icon"><i class="fab fa-whatsapp"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
 
                     <div class="col-lg-2 col-md-6">
                         <h5 class="mb-3" data-ar="روابط سريعة" data-en="Quick Links">روابط سريعة</h5>
                         <div class="footer-links">
-                            <a href="#features" data-ar="كيف يعمل" data-en="How it Works">كيف يعمل</a>
-                            <a href="#collections" data-ar="المجموعات" data-en="Collections">المجموعات</a>
+                            <a href="#how-it-works" data-ar="كيف يعمل" data-en="How it Works">كيف يعمل</a>
+                            <a href="#pricing" data-ar="الأسعار" data-en="Pricing">الأسعار</a>
                             <a href="#contact" data-ar="تواصل معنا" data-en="Contact">تواصل معنا</a>
                             <a href="#" data-ar="المدونة" data-en="Blog">المدونة</a>
                             <a href="#" data-ar="مركز المساعدة" data-en="Help Center">مركز المساعدة</a>
@@ -899,196 +3122,4 @@
                 </div>
 
                 <div class="row mt-5 pt-4 border-top">
-                    <div class="col-md-6">
-                        <p class="mb-0" data-ar="© 2024 تريند تريس. جميع الحقوق محفوظة." data-en="© 2024 TrendTrace. All rights reserved.">© 2024 تريند تريس. جميع الحقوق محفوظة.</p>
-                    </div>
-                    <div class="col-md-6 text-md-end">
-                        <p class="mb-0" data-ar="صنع بـ ❤️ في مصر" data-en="Made with ❤️ in Egypt">صنع بـ ❤️ في مصر</p>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </div>
-
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- AOS Animation -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-    <script>
-        // Global Variables
-        let currentLanguage = 'ar';
-        let isLoading = false;
-
-        // Initialize everything when document is ready
-        $(document).ready(function() {
-            // Initialize AOS animations
-            AOS.init({
-                duration: 800,
-                easing: 'ease-in-out',
-                once: true,
-                mirror: false
-            });
-
-            // Hide loading screen after delay
-            setTimeout(() => {
-                $('#loadingScreen').fadeOut(500);
-            }, 1500);
-
-            // Initialize all components
-            initializeNavbar();
-            initializeLanguage();
-            initializeUI();
-        });
-
-        // Enhanced Language System
-        function toggleLanguage() {
-            currentLanguage = currentLanguage === 'ar' ? 'en' : 'ar';
-            updateLanguage();
-            
-            // Show notification
-            showNotification(
-                currentLanguage === 'ar' ? 'تم تغيير اللغة إلى العربية' : 'Language changed to English',
-                'success'
-            );
-        }
-
-        function updateLanguage() {
-            const $elements = $('[data-ar][data-en]');
-            
-            // Update text content with animation
-            $elements.each(function() {
-                const $el = $(this);
-                const text = $el.attr(`data-${currentLanguage}`);
-                if (text && $el.text() !== text) {
-                    $el.fadeOut(200, function() {
-                        $el.text(text).fadeIn(200);
-                    });
-                }
-            });
-
-            // Update document properties
-            const $body = $('body');
-            const $html = $('html');
-            
-            if (currentLanguage === 'en') {
-                $body.addClass('en');
-                $html.attr('lang', 'en').attr('dir', 'ltr');
-            } else {
-                $body.removeClass('en');
-                $html.attr('lang', 'ar').attr('dir', 'rtl');
-            }
-
-            // Update language toggle button
-            $('.language-toggle span').text(currentLanguage === 'ar' ? 'EN' : 'AR');
-            
-            // Save language preference
-            localStorage.setItem('preferredLanguage', currentLanguage);
-        }
-
-        function initializeLanguage() {
-            // Load saved language preference
-            const savedLanguage = localStorage.getItem('preferredLanguage');
-            if (savedLanguage && savedLanguage !== currentLanguage) {
-                currentLanguage = savedLanguage;
-                updateLanguage();
-            }
-        }
-
-        function initializeNavbar() {
-            // Navbar scroll effect
-            $(window).on('scroll', function() {
-                const $navbar = $('#mainNavbar');
-                if ($(this).scrollTop() > 50) {
-                    $navbar.addClass('scrolled');
-                } else {
-                    $navbar.removeClass('scrolled');
-                }
-            });
-
-            // Smooth scrolling for anchor links
-            $('a[href^="#"]').on('click', function(e) {
-                const href = $(this).attr('href');
-                if (href !== '#' && href.length > 1) {
-                    e.preventDefault();
-                    const $target = $(href);
-                    if ($target.length) {
-                        const offsetTop = $target.offset().top - 80;
-                        $('html, body').animate({
-                            scrollTop: offsetTop
-                        }, 800);
-                    }
-                }
-            });
-        }
-
-        function initializeUI() {
-            // Floating action button (chat)
-            $('#fab').attr('title', currentLanguage === 'ar' ? 'مساعدة' : 'Help');
-        }
-
-        // Enhanced Notification System
-        function showNotification(message, type = 'success') {
-            const $notification = $('#notification');
-            const $text = $('#notificationText');
-            const $icon = $notification.find('i');
-            
-            // Update content
-            $text.text(message);
-            
-            // Update icon and style based on type
-            $notification.removeClass('success error').addClass(type);
-            if (type === 'success') {
-                $icon.removeClass().addClass('fas fa-check-circle me-2');
-            } else if (type === 'error') {
-                $icon.removeClass().addClass('fas fa-exclamation-circle me-2');
-            }
-            
-            // Show notification
-            $notification.addClass('show');
-            
-            // Auto hide after 4 seconds
-            setTimeout(() => {
-                hideNotification();
-            }, 4000);
-        }
-
-        function hideNotification() {
-            $('#notification').removeClass('show');
-        }
-
-        // Chat functionality
-        function startChat() {
-            showNotification(
-                currentLanguage === 'ar' ? 'ميزة الدردشة قريباً!' : 'Chat feature coming soon!',
-                'success'
-            );
-        }
-
-        // Keyboard shortcuts
-        $(document).on('keydown', function(e) {
-            // Alt + L for language toggle
-            if (e.altKey && e.keyCode === 76) {
-                e.preventDefault();
-                toggleLanguage();
-            }
-            
-            // Escape to hide notifications
-            if (e.keyCode === 27) {
-                hideNotification();
-            }
-        });
-
-        // Performance optimization: debounce resize events
-        let resizeTimer;
-        $(window).on('resize', function() {
-            clearTimeout(resizeTimer);
-            resizeTimer = setTimeout(() => {
-                AOS.refresh();
-            }, 250);
-        });
-    </script>
-</body>
-</html>
+                    <div class
